@@ -1,4 +1,4 @@
-#Usage in Ubuntu bash:
+# Usage in Ubuntu bash:
 
 > ./createdb.sh
 

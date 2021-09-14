@@ -1,4 +1,5 @@
 <?php
+//
 // --------------------------------------------------------------------
 // A fast and simple simple script that finds the MD5 hash keys
 // for all files within a folder and compares them in order to
@@ -16,6 +17,7 @@
 // Author: Apostolos Malatras, email: apmalatras@biol.uoa.gr
 // Date: April 21, 2016
 // --------------------------------------------------------------------
+//
 
 $argument_1 = $argv[1];
 

@@ -17,4 +17,7 @@ wget -q -O Entrez_ENSG.txt https://www.arabidopsis.org/download_files/Genes/TAIR
 cut -f1 Entrez_ENSG.txt Entrez_WP.txt | sort -nu > Entrez.txt
 wget -q https://agris-knowledgebase.org/Downloads/AtRegNet.zip && unzip -qo AtRegNet.zip && rm AtRegNet.zip && php AtRegNet.php| sort -u > AtRegNet.txt
 cut -f2 AtRegNet.txt | sort -u > TF.txt
+wget -q http://neomorph.salk.edu/dap_web/pages/dap_data_v4/fullset/dap_download_may2016_genes.zip && unzip -qo dap_download_may2016_genes.zip && rm dap_download_may2016_genes.zip
+mv dap_data_v4/genes/ . && php Ecker.php > Ecker.txt
+cut -f1 Ecker.txt | sort -u > TF1.txt && cut -f2 Ecker.txt | sort -u >> TF1.txt && sort -u TF1.txt > Ecker_TF.txt
 END

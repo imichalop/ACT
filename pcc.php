@@ -1,5 +1,8 @@
 <?php
 include("dbc.php");
+//Execute as
+// pcc.php > PCC.phylip
+
 
 //$expdata is a hash array of the Expression value of a each sample for each probeset if calculating Sample correlations or of each probeset in each samples if calculating Gene correlations
 //$colnum is the number of samples or the number of probesets respectively
@@ -41,7 +44,7 @@ while ($myrow=mysqli_fetch_array($result)) {
 
 
 
-//Execute as such
+//Call the functions as such
 
 //convdata($expression,$samplenum,$probesetnum);
 

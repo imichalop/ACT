@@ -9,4 +9,4 @@ PHP scripts required to perform the protocol for the creation of an <i>Arabidops
 
 **dbc.php** contains the PHP code which performs the local MySQL database connection.
 
-**pcc.php** contains the PHP functions to perform pairwise Sample or Gene correlations. Outputs in command window.
+**pcc.php** contains the PHP functions to perform pairwise Sample or Gene correlations.

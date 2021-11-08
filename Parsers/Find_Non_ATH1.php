@@ -31,7 +31,7 @@ if(is_dir($main_directory) && $argc==2){
             $last_num2 = $sample_num -1;
             echo "$sample[$last_num1]\t$sample[$last_num2]\t$chip\n"; //Print Series, Sample and Chip info
             //echo strpos($chip,4)."\n";
-            /*if(strpos($chip,4)!="ATH1"){
+            /*if(substr($chip, 0, 4)!="ATH1"){
               unlink($file[$i]);        //Delete files CEL files that are not from ATH1 chip platform
               echo "Deleted $file[$i]\n";
               }*/

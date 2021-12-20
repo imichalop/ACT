@@ -6,9 +6,11 @@ if($argc==2){
         $linenum = count($line);
         for($i=0;$i<$linenum;$i++){
                 $line[$i] = rtrim($line[$i]);
-                $SampleID[$i] = $line[$i];
-                $query = "select SampleIndex from Samples natural join Sample where Sample.SampleID = '$SampleID[$i]'";
-                echo "$query\n";
+                $arr = explode('.', $line[$i], 2);
+                $SampleID[$i] = $arr[1];
+                $StudyID[$i] = $arr[0];
+                $query = "select SampleIndex from Samples natural join Sample where Sample.SampleID = '$SampleID[$i]' and Sample.StudyID='$StudyID[$i]'";
+                //echo "$query\n";
                 $result = mysqli_query($link,$query);
                 while ($myrow=mysqli_fetch_array($result)) {
                         echo "$myrow[0]\n";

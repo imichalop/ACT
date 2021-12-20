@@ -6,8 +6,8 @@ $newickfnum=count($newickf);
 // If more than one line; like clustalw
 $linef="";
 for($i=0;$i<$newickfnum;$i++){
-	$newickf[$i]=trim($newickf[$i]);
-	$linef.=$newickf[$i];
+        $newickf[$i]=trim($newickf[$i]);
+        $linef.=$newickf[$i];
 }
 $leaffnum=substr_count($linef, ',');
 $leaffnum+=1;
@@ -17,7 +17,10 @@ $names=str_replace("zibiiiiit82","(",$names);
 $names=str_replace("zibiiiiit83",")",$names);
 $namesnum=count($names);
 for($i=0;$i<$namesnum;$i++){
-	$names[$i]=trim($names[$i],"'");
-	echo "$names[$i]\n";
+        $samplename = "";
+        $names[$i]=trim($names[$i],"'");
+        $arr = explode('.', $names[$i], 2);
+        echo "$arr[1]\n";
+        //echo "$names[$i]\n";
 }
 ?>

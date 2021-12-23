@@ -1,5 +1,5 @@
 <?php
-//Usage: php Create_Selected_Samples.php <Tree leaf names> 
+//Usage: php Create_Selected_Samples_from_Leaf_names.php <Tree leaf names> 
 include("dbc.php");
 if($argc==2){
         $line = file($argv[1]);

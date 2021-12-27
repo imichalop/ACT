@@ -63,7 +63,7 @@ if(is_dir($main_directory) && $argc==2){
       //echo "$rep_num\n";
       for($x = 1;$x<$rep_num;$x++){
         $dupe = $rep1[$key][$x];
-        //unlink($dupe);
+        unlink($dupe);
         echo "Removed file $dupe\n";
       }
       echo "\n";

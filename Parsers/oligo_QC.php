@@ -56,12 +56,12 @@ if(is_dir($main_directory) && $argc==2){
     foreach ($sample as $key => $value){
       if($iqr_rle[$key]>4 || ($med_rle[$key] > 0.2 && $med_rle[$key] < -0.2)){
         echo "Cut RLE: $iqr_rle[$key]\t$key\n";
-        //unlink($key);
+        unlink($key);
         
       }
       elseif($med_nuse[$key] > 1.1){
         echo "Cut Nuse: $iqr_nuse[$key]\t$key\n";
-        //unlink($key);
+        unlink($key);
       }
     }
   }

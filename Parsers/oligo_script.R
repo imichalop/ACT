@@ -1,6 +1,6 @@
 #!/usr/bin/env Rscript
 args = commandArgs(trailingOnly=TRUE)
-library(oligo)
+suppressPackageStartupMessages(library("oligo"))
 setwd(args[1])  
 #read all CEL files from current working directory
 #readdata <- ReadAffy(compress = FALSE)

@@ -54,7 +54,7 @@ if(is_dir($main_directory) && $argc==2){
     }
     //echo "\n";
     foreach ($sample as $key => $value){
-      if($iqr_rle[$key]>4 || ($med_rle[$key] > 0.2 && $med_rle[$key] < -0.2)){
+      if($iqr_rle[$key]>0.4 || ($med_rle[$key] > 0.2 && $med_rle[$key] < -0.2)){
         echo "Cut RLE: $iqr_rle[$key]\t$key\n";
         unlink($key);
         
